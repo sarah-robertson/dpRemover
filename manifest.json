@@ -1,0 +1,26 @@
+{
+  "name": "DarkPatternRemoval",
+  "short_name": "DPR",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Remove specified Dark Patterns from prettylittlething.com",
+  "content_scripts": [
+    {
+      "matches": ["https://*.prettylittlething.com/*"],
+      "js": ["scripts/main.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["https://*.prettylittlething.com/", "activeTab"],
+  "icons": {
+    "16": "icons/icon32.png",
+    "48": "icons/icon96.png",
+    "128": "icons/icon256.png"
+  },
+  "browser_action": {
+    "default_title": "Dark Pattern Removal",
+    "default_icon": {
+      "16": "icons/icon32.png"
+    }
+  }
+}
